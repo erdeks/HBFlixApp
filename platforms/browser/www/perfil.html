@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--<meta http-equiv="Content-Security-Policy" content="
+        default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;;
+        style-src &apos;self&apos; &apos;unsafe-inline&apos;;
+        media-src *;
+        img-src &apos;self&apos; data: content:;
+        script-src * &apos;unsafe-eval&apos; &apos;unsafe-inline&apos;;
+        connect-src * &apos;unsafe-eval&apos; &apos;unsafe-inline&apos;;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+        <title>Hello World</title>
+        <style type="text/css">
+            html,body{
+                background-color: #181E1F;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #EC67A2;
+            }
+        </style>
+    </head>
+    <body>
+<div class="app">
+    <ul>
+        <li><a class="active" href="inicio.html"><span class="glyphicon glyphicon-home" style="font-size: 20px"></span>  Inicio</a></li>
+        <li><a class="active" href="inicio.html"><span class="glyphicon glyphicon-film" style="font-size: 20px"></span>  Ver peliculas</a></li>
+        <li><a href="perfil.html"><span class="glyphicon glyphicon-user" style="font-size: 20px"></span>  Perfil</a></li>
+        <li><a href="index.html">Logout  <span class="glyphicon glyphicon-off" style="font-size: 20px"></span></a></li>
+    </ul>
+    <h1 style="color: #EC67A2; text-align: center;">Perfil</h1>
+    </br>
+<!--Una peli inicio-->
+        <ul style="color: #EC67A2;">
+            <p id="nombre" style="color: #EC67A2;"></p>
+            <p id="apellido" style="color: #EC67A2;"></p>
+            <p id="telefono" style="color: #EC67A2;"></p>
+            <p id="email" style="color: #EC67A2;"></p>
+            <p id="date" style="color: #EC67A2;"></p>
+        </ul>
+<!--final peli -->
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            document.getElementById("nombre").innerHTML = "Nombre: "+localStorage.getItem("nombre");
+            document.getElementById("email").innerHTML = "Email: "+localStorage.getItem("email");
+            document.getElementById("telefono").innerHTML = "Telefono: "+localStorage.getItem("telefono");
+            document.getElementById("apellido").innerHTML = "Apellido: "+localStorage.getItem("apellido");
+            document.getElementById("date").innerHTML = "Fecha de nacimiento: "+localStorage.getItem("date");
+        </script>
+    </body>
+</html>

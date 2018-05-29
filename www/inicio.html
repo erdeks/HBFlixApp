@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--<meta http-equiv="Content-Security-Policy" content="
+        default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;;
+        style-src &apos;self&apos; &apos;unsafe-inline&apos;;
+        media-src *;
+        img-src &apos;self&apos; data: content:;
+        script-src * &apos;unsafe-eval&apos; &apos;unsafe-inline&apos;;
+        connect-src * &apos;unsafe-eval&apos; &apos;unsafe-inline&apos;;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+        <title>HBFlix</title>
+        <style type="text/css">
+            html,body{
+                background-color: #181E1F;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #EC67A2;
+            }
+            p,span{
+                font-size: 10px;
+            }
+        </style>
+    </head>
+    <body>
+<div class="app">
+    <ul>
+        <li><a class="active" href="inicio.html"><span class="glyphicon glyphicon-home"></span>  Inicio</a></li>
+        <li><a class="active" href="inicioSeries.html"><span class="glyphicon glyphicon-film"></span>  Ver series</a></li>
+        <li><a href="perfil.html"><span class="glyphicon glyphicon-user"></span>  Perfil</a></li>
+        <li><a href="index.html">Logout  <span class="glyphicon glyphicon-off"></span></a></li>
+    </ul>
+    <h1 style="color: #EC67A2; text-align: center;">PELÍCULAS</h1>
+    </br>
+    <h2 style="color: #EC67A2; text-align: center;">Estrenos</h2>
+<!--Una peli inicio-->
+    <div class="row" style="margin-left: 2%;">
+        <div id="estrenos1"></div>
+        <div id="estrenos2" style="padding-left:22px;float: left;"></div>
+        <div id="estrenos3" style="padding-left:22px;float: left;"></div>
+        <div id="estrenos4" style="padding-left:22px;float: left;"></div>
+    </div>
+<!--Una peli inicio-->
+    <h2 style="color: #EC67A2; text-align: center;">Favoritos</h2>
+<!--Una peli inicio-->
+    <div class="row" style="margin-left: 2%;">
+        <div id="fav1"></div>
+        <div id="fav2" style="padding-left:22px;float: left;"></div>
+        <div id="fav3" style="padding-left:22px;float: left;"></div>
+        <div id="fav4" style="padding-left:22px;float: left;"></div>
+    </div>
+    <div class="row" style="margin-left: 2%;">
+        <div id="fav5" ></div>
+        <div id="fav6" style="padding-left:22px;float: left;"></div>
+        <div id="fav7" style="padding-left:22px;float: left;"></div>
+        <div id="fav8" style="padding-left:22px;float: left;"></div>
+    </div>
+<!--Una peli inicio-->
+    <h2 style="color: #EC67A2; text-align: center;">Ultimas Agregadas</h2>
+<!--Una peli inicio-->
+    <div class="row" style="margin-left: 2%;">
+        <div id="ult1"></div>
+        <div id="ult2" style="padding-left:22px;float: left;"></div>
+        <div id="ult3" style="padding-left:22px;float: left;"></div>
+        <div id="ult4" style="padding-left:22px;float: left;"></div> 
+    </div>   
+<!--final peli -->
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            pelis();
+            //document.getElementById("nombre").innerHTML = localStorage.getItem("nombre");
+            //document.getElementById("email").innerHTML = localStorage.getItem("email");
+        </script>
+    </body>
+</html>
